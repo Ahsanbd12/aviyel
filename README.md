@@ -7,7 +7,7 @@
 
 #### Installation Guide
 
-1. Navigate to some directory named aviyel
+1. Navigate to same directory named aviyel
 2. git clone https://github.com/Ahsanbd12/aviyel.git
 3. source venv/bin/activate
 4. pip3 install -r requirements.txt
