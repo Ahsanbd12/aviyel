@@ -1,0 +1,5 @@
+from .talk_api_view import TalkAPIView
+from .conference_api_view import ConferenceAPIView
+from .conference_collection_api_view import ConferenceCollectionAPIView
+from .user_collection_api_view import UserCollectionAPIView
+from .talk_collection_api_view import TalkCollectionAPIView
