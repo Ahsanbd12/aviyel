@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "a2dffb95-14be-4c66-9159-ec3c26fc5727",
+		"name": "Aviyel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conference",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Conference talk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/44/talks/55",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"44",
+						"talks",
+						"55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Conferences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Conference Talks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/3/talks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"3",
+						"talks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"ahsan\",\n    \"email\": \"ahsan@abcd.com\",\n    \"password\": 12345\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE new conference",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"ahsan\",\n    \"description\": \"\",\n    \"start_date\": \"2021-02-23T00:00:00Z\",\n    \"end_date\": \"2021-02-23T00:00:00Z\",\n    \"talks\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE new talk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"phone\",\n    \"description\": \"this is smartphone\",\n    \"duration\": \"01:30:00\",\n    \"schedule_date\": \"2022-12-12T00:00:00Z\",\n    \"users\": [\"45\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/44/talks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"44",
+						"talks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT Talk",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mobile\",\n    \"description\": \"this is smartphone\",\n    \"duration\": \"01:30:00\",\n    \"schedule_date\": \"2022-12-12T00:00:00Z\",\n    \"users\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/44/talks/55",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"44",
+						"talks",
+						"55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT Conference",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"mobile\",\n    \"description\": \"this is smartphone\",\n    \"duration\": \"01:30:00\",\n    \"schedule_date\": \"2022-12-12T00:00:00Z\",\n    \"users\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/44",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"44"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
