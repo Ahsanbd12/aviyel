@@ -47,3 +47,9 @@ Create `.env` in root directory
     `{ "title": "XYZ", "description": "XYZ", "duration": "01:30", "schedule_date": "2022-02-02" }`
 8. Show a specific conference specific talk GET localhost:8000/api/conferences/<:id>/talks/<:id>
 9. Add a user in specific talks PATCH localhost:8000/api/conferences/<:id>/talks/<:id> `{ users: [user_id, user_id] }`
+
+
+### Future Improvements
+1. We can add API versioning.
+2. Document the best practices to scale the project.
+3. Test case converage.
