@@ -35,7 +35,8 @@ Create `.env` in root directory
 - Run `python3 manage.py runserver`
 
 ### Testing
-- You can use Postman or any other tool to test the API endpoints
+- You can use Postman or any other tool to test the API endpoints.
+- You can follow the `API.postman_collection.json`
 
 ### Project URLs 
 1. List all users: GET localhost:8000/api/users 
@@ -53,3 +54,4 @@ Create `.env` in root directory
 1. We can add API versioning.
 2. Document the best practices to scale the project.
 3. Test case converage.
+
