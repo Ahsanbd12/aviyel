@@ -16,9 +16,12 @@ class TalkAPIView(APIView):
 
     def patch(self, request, **kwargs):
         talk = get_object_or_404(Talk, pk=kwargs["t_id"])
-        if request.data.get("users", None):
+        user_list = request.data.get("users", None)
+        if user_list:
             users = User.objects.filter(id__in=request.data.get("users"))
             talk.users.set(users)
+        elif user_list == []:
+            talk.users.clear()
         serializer = TalkSerializer(talk, data=request.data, partial=True)
         if not serializer.is_valid():
             raise ValidationError(serializer.errors)
