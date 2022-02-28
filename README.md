@@ -16,9 +16,9 @@
 ### Postgres DB Dependencies
 1. pip install psycopg2-binary
 2. open postgres terminal
-  a. `create DATABASE aviyel;`
-  b. `create user user_name with encrypted password 'mypassword';`
-  c. `grant all privileges on database sample_db to user_name;`
+  - `create DATABASE aviyel;`
+  - `create user user_name with encrypted password 'mypassword';`
+  - `grant all privileges on database sample_db to user_name;`
 
 ### Run migrations
 - Navigate to aviyel directory
