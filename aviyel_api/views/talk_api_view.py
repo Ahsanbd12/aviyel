@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 
 from aviyel_api.serializers import TalkSerializer
 
-from aviyel_api.models import Talk
+from aviyel_api.models import Talk, User
 
 class TalkAPIView(APIView):
     def get(self, request, **kwargs):
@@ -16,6 +16,9 @@ class TalkAPIView(APIView):
 
     def patch(self, request, **kwargs):
         talk = get_object_or_404(Talk, pk=kwargs["t_id"])
+        if request.data.get("users", None):
+            users = User.objects.filter(id__in=request.data.get("users"))
+            talk.users.set(users)
         serializer = TalkSerializer(talk, data=request.data, partial=True)
         if not serializer.is_valid():
             raise ValidationError(serializer.errors)
